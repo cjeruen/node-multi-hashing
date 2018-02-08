@@ -404,11 +404,11 @@ Handle<Value> cryptonight(const Arguments& args) {
     if (args.Length() < 1)
         return except("You must provide one argument.");
     
-    if (args.Length() >= 2) {
-        if(!args[1]->IsBoolean())
-            return except("Argument 2 should be a boolean");
-        fast = args[1]->ToBoolean()->BooleanValue();
-    }
+    // if (args.Length() >= 2) {
+    //     if(!args[1]->IsBoolean())
+    //         return except("Argument 2 should be a boolean");
+    //     fast = args[1]->ToBoolean()->BooleanValue();
+    // }
 
     Local<Object> target = args[0]->ToObject();
 
